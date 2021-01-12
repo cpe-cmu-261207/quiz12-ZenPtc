@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded',function(){
     document.querySelector('#button-create-table').onclick = function(){
         const row = document.querySelector("#input-row").value;
         const col = document.querySelector("#input-col").value;
+        const table = document.querySelector('table')
 
         let num=0;
 
@@ -20,7 +21,10 @@ document.addEventListener('DOMContentLoaded',function(){
             for(let j=0;j<col;j++){
                 const td = document.createElement('td');
                 td.innerHTML = ++num;
+                tr.append(td)
             }
+            table.append(tr)
         }
+
     }
 })
